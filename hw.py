@@ -1,0 +1,1 @@
+print("Hello World")	#because why not start at the beginning
