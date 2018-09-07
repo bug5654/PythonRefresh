@@ -24,3 +24,8 @@ print("after sorting: " + str(comprable) )
 print("and readout element by element: ")
 for a in comprable:
 	print(a)
+
+mytuple = (2,3)
+print("tuple: " + str(mytuple)) #same as lists, but const list`
+print("as a list: " + str(list(mytuple)))
+print("listsample as a tuple: " + str(tuple(listsample)))
