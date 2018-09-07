@@ -20,3 +20,7 @@ comprable = [2,5,16,2,4]
 print("numerical list: " + str(comprable) )
 comprable.sort()
 print("after sorting: " + str(comprable) )
+
+print("and readout element by element: ")
+for a in comprable:
+	print(a)
