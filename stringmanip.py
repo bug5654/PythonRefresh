@@ -14,3 +14,8 @@ stringVar = stringVarReset
 print( "strip whitespace: " + stringVar.strip() )
 print( "positions 3-5: " + stringVar[3:5])
 print( "remove last 3 characters: " + stringVar[:-3] )
+print( "first 10 characters alternate route: %.10s" % stringVar)
+
+randNum=951.0372486
+print("non-rounded float: %f" % randNum)
+print("rounded float: %.2f" % randNum)
