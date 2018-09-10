@@ -1,4 +1,5 @@
 import numpy as np
+from numpy import pi
 
 a = np.arange(15).reshape(3, 5)
 print("a: " + str(a))
@@ -16,3 +17,14 @@ d = np.array([ [  [1,2,3],[4,5,6] ],[ [7,8,9], [10,11,12]] ])
 #d = np.array([ [  [1,2,3],[4,5,6] ],[ [7,8,9] ] ])
 #1st is prettyprinted, 2nd is not
 print("d: " + str(d))
+f = np.array([[1,2],[3,4]], dtype=complex)
+print("f: " + str(f))
+print("np.zeros( (3,4) ): " + str(np.zeros( (3,4) )))
+print("np.ones( (2,3,4), dtype=np.int16 ) : " + str(np.ones( (2,3,4), dtype=np.int16 ) ) )
+print("np.empty( (2,3) )  : " + str(np.empty( (2,3) ) ))
+print("np.arange( 10, 30, 5 )  : " + str(np.arange( 10, 30, 5 ) ))
+print("np.arange( 0, 2, 0.3 )  : " + str(np.arange( 0, 2, 0.3 ) ) )
+print("np.linspace( 0, 2, 9 )  : " + str(np.linspace( 0, 2, 9 )))
+x = np.linspace( 0, 2*pi, 100 )
+print("x=np.linspace( 0, 2*pi, 100 )  : " + str(np.linspace( 0, 2*pi, 100 ) ))
+print("sin(x): " + str(np.sin(x)))
