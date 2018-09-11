@@ -11,3 +11,5 @@ class adder(object):
 		self.value += val
 	def getValue(self):
 		return self.value
+	def passball(self):
+		pass;
