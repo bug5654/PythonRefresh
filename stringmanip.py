@@ -45,3 +45,34 @@ print("but it's one based:",a[:len(a)])		#would cut off a letter if len 0-based
 print("remember though, strings are immutable in python")
 b=a[:14]+r"wicked\this\way\comes"
 print("so create a new string instead:",b)
+a,b,c = ["d","e","f"] #multiple assignment
+print(a,b,c)
+#lambda checker
+
+def strAppender(n):		#n set in labmda fn envrion on call, and separate form n subsequently with this implementation
+	return lambda x: n + x	#x + n was a prepender
+qq=strAppender("q")
+print(qq("q"))
+rr=strAppender("r")
+print(rr("age"))
+n="s"	#should NOT affect the anonymous strAppender generated function
+print(rr("ange"))
+
+def strAppenderModifiable(n=""):
+	"""Returns a lambda concatenation/addition function"""
+	return lambda x, y=n: y+x;
+tt=strAppenderModifiable("mod")
+uu=strAppenderModifiable()
+print("lambda fn: ",tt("ified"))
+print(uu("ified", "mod"))
+print(uu("ified"))
+vv=strAppenderModifiable(2)
+print(str(vv(6)))		#'+' is internally overridden by python
+words = ['your', 'mother', 'hamster']
+print(words)
+for w in words:
+	print(w,len(w))
+for w in words[:]:
+	if(w[0] in ("m","h")):
+		words.insert(0,w)	#copy mother to 0th position
+print("after inserting 'm' and 'h' words at the 0 position:",words)
