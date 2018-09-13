@@ -36,7 +36,8 @@ alt = ("My bologna has a first name\n" "It's O-S-C-A-R\n"
 	"My bologna has a second name\n" "It's M-A-Y-E-R\n")	###
 	#putting string literals in parens concatenates them, but only exact literals
 print(alt+"Should look familiar")
-print("slicing (listing every index):",alt[3],alt[4],alt[5],alt[6],alt[7],alt[8],alt[9])
+print("slicing (listing every index):",\
+	alt[3],alt[4],alt[5],alt[6],alt[7],alt[8],alt[9])
 print("slicing the easy way(range): ",alt[3:10])	#don't forget [min,max)
 print("does it work backwards? ",alt[9:2:-1])	#have to specify step since min>max still [min,max) though
 print("back to:",a)
