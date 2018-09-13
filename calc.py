@@ -32,3 +32,25 @@ while r<5:
 	print(r)
 	r+=1		#r++ wrong language
 #there is no conflict...I mean do-while
+
+print("checking that an else of a for loop always \
+executes if loop does not get a break statement")
+for n in range(2,5):
+	print(n, end=" ")	#no newline for each number
+else:
+	print(5)	#newline at the end though
+print("adding a break on 4")
+for n in range(2,5):
+	print(n)
+	if n>3:
+		break
+else:
+	print(5)	#good place to cleanup any for loop messes?
+
+#do nothing in the loop
+for n in range(2,5):
+	pass 	#syntatically required, great placeholder
+else:
+	print("passed")
+g=range(2,9,2)
+print(str(list(g)))
