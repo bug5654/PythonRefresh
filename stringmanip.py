@@ -80,7 +80,12 @@ print("after inserting 'm' and 'h' words at the 0 position:",words)
 print(" ".join(words))
 print("compared to: ",*words)
 #trying to dict(range(1,len(words)),words)
+def unpackDict(d,i):
+	return str(i) + d[i]
 d={}
 for i in range(1,len(words)):
 	d[i]= words[i]
-print("unpacking not totally useful dict: ",str(**d))
+print("unpacking not totally useful dict: ",*[unpackDict(d,q) for q in d])
+print("equivalent: :",*[str(q)+d[q] for q in d])
+del words[:]	#dealloc the list by deallocing each element
+#print("should error out: ", words) #and does!
