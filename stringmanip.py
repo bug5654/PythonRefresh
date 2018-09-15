@@ -77,3 +77,10 @@ for w in words[:]:
 	if(w[0] in ("m","h")):
 		words.insert(0,w)	#copy mother to 0th position
 print("after inserting 'm' and 'h' words at the 0 position:",words)
+print(" ".join(words))
+print("compared to: ",*words)
+#trying to dict(range(1,len(words)),words)
+d={}
+for i in range(1,len(words)):
+	d[i]= words[i]
+print("unpacking not totally useful dict: ",str(**d))
