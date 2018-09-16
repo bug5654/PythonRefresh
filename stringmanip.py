@@ -48,3 +48,13 @@ b=a[:14]+r"wicked\this\way\comes"
 print("so create a new string instead:",b)
 a,b,c = ["d","e","f"] #multiple assignment
 print(a,b,c)
+
+#string literals
+print("str v repr:",str(alt),"repr:",repr(alt))
+import math
+print(f'pi is legally {math.pi:.2f}.')	#string format in string
+print("mathematically it's more like {0}".format(round(math.pi,15)))
+print("there are other approximations:")
+approxs = {"22/7":22/7, "333/106":333/106, "16/15":16/15}
+for title, fraction in approxs.items():
+	print(f"{title:10} ~= {fraction:1.8f}")
