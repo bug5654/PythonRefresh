@@ -58,3 +58,47 @@ print("there are other approximations:")
 approxs = {"22/7":22/7, "333/106":333/106, "16/15":16/15}
 for title, fraction in approxs.items():
 	print(f"{title:10} ~= {fraction:1.8f}")
+
+#iterators
+s = "a string"
+it = iter(s)
+print("iterator after creation:",it)
+while True:
+	try:
+		print("next(it):",next(it))
+	except(StopIteration):
+		print("StopIteration occured!")
+		break;
+
+import random
+
+class randomLetterGen:
+	"""pulls random letters from a string"""
+	
+	def __init__(self, stringer):
+		self.used = []
+		self.genString=stringer
+
+	def __iter__(self):
+		return self;
+
+	def __next__(self):
+		if(len(self.used) == len(self.genString)):	#catch error on blank genString
+			raise StopIteration
+		distinct = False
+		while distinct == False:
+			index = random.randint(0,len(self.genString)-1)
+			if index in self.used:
+				continue
+			self.used.append(index)
+			yield self.genString[index]
+			if(len(self.used) == len(self.genString)):
+				raise StopIteration		#stops hanging
+
+r = randomLetterGen("Bass Cannon")
+print("Base string: Bass Cannon")
+try:
+	for char in r.__next__():
+		print("random letter from gen:",char)
+except:
+	print("caught Exception!")
