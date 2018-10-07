@@ -6,14 +6,14 @@ class TestStringMethods(unittest.TestCase):
 	def setUp(self):	#called before each test case
 	 	print("\nsetUp")
 
-	def suite():
+	def suite(self):
 		stringTestSuite = unittest.TestSuite()		#suite object to hold tests
 		stringTestSuite.addTest("test_isupper")		#individual tests
 		stringTestSuite.addTest("test_split")
 		stringTestSuite.addTest("test_upper")
 		return stringTestSuite						#return the suite
 
-	def suite2():
+	def suite2(self):
 		#identical functionally to suite()
 		tests=['test_isupper','test_split','test_upper']	#individual tests listed
 		return unittest.TestSuite(TestStringMethods,tests)	#return the suite
